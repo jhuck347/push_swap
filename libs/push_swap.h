@@ -16,7 +16,7 @@
 # include <stdbool.h>
 # include <limits.h>
 # include "libft/libft.h"
-# include "libft/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 
 typedef struct s_stack_node
 {
