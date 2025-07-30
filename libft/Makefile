@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jhuck <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/13 11:48:04 by jhuck             #+#    #+#              #
-#    Updated: 2024/10/13 11:49:16 by jhuck            ###   ########.fr        #
+#    Updated: 2025/07/30 10:12:54 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ AR				= ar rcs
 
 # Source Files
 FTIS_DIR		=	$(SRC_DIR)ft_is/ft_isalnum.c \
+					$(SRC_DIR)ft_is/ft_isspace.c \
+					$(SRC_DIR)ft_is/ft_ishexdigit.c \
 					$(SRC_DIR)ft_is/ft_isalpha.c \
 					$(SRC_DIR)ft_is/ft_isascii.c \
 					$(SRC_DIR)ft_is/ft_isdigit.c \
