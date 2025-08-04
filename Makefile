@@ -6,7 +6,7 @@
 #    By: juhuck <juhuck@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/25 18:07:09 by juhuck            #+#    #+#              #
-#    Updated: 2025/06/25 18:07:17 by juhuck           ###   ########.fr        #
+#    Updated: 2025/08/04 13:51:16 by juhuck           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,12 +55,14 @@ $(LIBFT):
 
 all: 				$(NAME)
 
-$(NAME): 			$(OBJ) $(LIBFT)
+$(NAME): 			$(OBJ) $(LIBFT) Makefile
+					@echo "🔗 Linking $(NAME)..."
 					@$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
 
 
-$(OBJ_DIR)%.o:		$(SRC_DIR)%.c 
+$(OBJ_DIR)%.o:		$(SRC_DIR)%.c $(LIBFT)
 					@mkdir -p $(@D)
+					@echo "🛠️  Compiling $<"
 					@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 clean:
